@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Assets/favicon/favicon-32x32.png" />
+    <link rel="manifest" href="./Assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./Assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <link href="./Assets/Css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Comfortaa:wght@300&family=Montserrat:wght@100&family=Patrick+Hand&family=Poppins:wght@200;300&family=Raleway:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="css/self-quiz.css" rel="stylesheet" />
+  </head>
+
+  <body onload="loaded()">
+
+    <div id="loader"></div>
+    <center>
+   
+      <h1>Self Assessment Quiz!</h1>
+      <section class="fillerQuestion">
+        <h3>How was your day today?</h3>
+        <button id="btn11" type="button" class="responses-btn" onclick="filler1()">Good!</button>
+        <button id="btn12" type="button" class="responses-btn" onclick="filler2()">In the middle</button>
+        <button id="btn13" type="button" class="responses-btn" onclick="filler3()">Not good...</button>
+      </section>
+    
+      <section class="firstQuestion">
+        <h3>How are you feeling right now?</h3>
+
+        <button id="btn1" type="button" class="responses-btn" onclick="happy()">Happy/Content</button>
+        <button id="btn2" type="button" class="responses-btn" onclick="sad()">Sad/Discontent</button>
+        <button id="btn3" type="button" class="responses-btn" onclick="angry()">Angry/Irritated</button>
+        <button id="btn4" type="button" class="responses-btn" onclick="nervous()">Nervous/Tense</button>
+        <button id="btn5" type="button" class="responses-btn" onclick="sleepy()">Sleepy/Tired</button>
+        <div id="results"></div>
+      </section>
+
+      <section class="secondQuestion">
+        <h3>What genres do you typically like?</h3>
+        <button id="btn6" type="button" class="responses-btn" onclick="rock()">Rock</button>
+        <button id="btn7" type="button" class="responses-btn" onclick="rap()">Hip-hop/Rap</button>
+        <button id="btn8" type="button" class="responses-btn" onclick="pop()">Pop</button>
+        <button id="btn9" type="button" class="responses-btn" onclick="alt()">Alternative</button>
+        <button id="btn10" type="button" class="responses-btn" onclick="country()">Country</button>
+      </section>
+      <section class="Results-show"></section>
+      <section class = "Results">
+        <button id='btn11' class="resultbtn" type="button" onclick="checkResults()"><strong><i>We have Something for you!</i></strong></button>
+      </section>
+
+
+          <a href="happyspace.html"><button class="back-btn">Go Back</button></a>
+   
+
+    </center>
+    
+    <script src="js/self-quiz.js"></script>
+  </body>
+</html>

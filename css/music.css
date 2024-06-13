@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@600&family=Manrope:wght@300&display=swap');
+
+
+:root{
+    --main-color:#ff158a;
+    --black:rgb(70, 70, 70);
+    --light-color:#777;
+    --bg: radial-gradient(circle, #25ff99, #00f1d6, #00dcff, #00c3ff, #5fa6f8);
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+    color:var(--black);
+}
+
+.heading span{
+    color:var(--main-color);
+    border-radius: .5rem;
+    background: #46e3ff;
+    padding:0 1.5rem;
+}
+
+.btn{
+    margin-top: 0.4rem;
+    margin-left: 48rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    color:#fff;
+    background:var(--black);
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow:hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; right:0;
+    height: 100%;
+    width:0%;
+    background:var(--black);
+    z-index: -1;
+    transition: .2s ease-out;
+}
+
+.btn:hover::before{
+    left:0;
+    width:100%;
+}
+.colour{
+    color:#e85454e5; 
+}
+
+.p-colour{
+    color: var(--black);
+}
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+    font-weight: bolder;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+}
+
+
+
+#menu-btn{
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.3rem;
+    border-radius: .5rem;
+    color: var(--main-color);
+    background: var(--bg);
+    display: none;
+}
+
+#menu-btn:hover{
+    color: #fff;
+    background: var(--main-color);
+}
+
+.quote{
+    background-color: var(--bg);
+}
+
+.write{
+    text-align: center;
+    color:#e85454e5;
+    font-size: 1.7rem;
+    padding-top: 8rem;
+    font-weight: 50;
+ 
+}
+
+.fa-quote-right{
+    margin-left: auto;
+    font-size: 5rem;
+    color:var(--bg);
+}
+
+
+
+.quotes{
+    background-color: #fff0fac9 ;
+}
+
+
+.footer{
+    background: var(--bg);
+}
+
+.footer .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:var(--black);
+}
+
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    color:var(--light-color);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    color: var(--black);
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:115%; right: 2rem;
+        background:rgb(255, 255, 255) !important  ;
+        box-shadow: var(--box-shadow);
+        border:var(--border);
+        border-radius: .5rem;
+        width: 30rem;
+        transform: scale(0);
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .header .navbar.active{        
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        padding:1rem;
+        margin: 1rem;
+        border-radius: .5rem;
+    }
+
+    .header .navbar a:hover{
+        background: var(--bg);
+    }
+
+    .home .content{
+        text-align: center;
+    }
+    .home .content h3{
+        padding-top: 15%;
+    }
+    .home .image img{
+        width: 80%;
+        left: 10%;
+    }
+
+}
+
+
+
+.container{
+    align-items: center;
+    /* width: 50rem; */
+    align-self: center;
+    margin-top: 4rem;
+    background-color: #f3f3f3;
+    width:100rem;
+    margin-left:8rem;
+  }
+  
+  .box2{
+    background-image: linear-gradient(#36daf7,#ffffff);
+    /* background-color:#a012d8 ; */
+    /* padding-top: 0.5rem; */
+    padding-bottom: 0.75rem;
+    /* background-image: url(https://themes.3rdwavemedia.com/wp-content/uploads/2019/04/decibel-bootstrap-template-for-musicians-bands.jpg); */
+    /* background-repeat: no-repeat; */
+  }
+  
+  .title{
+    text-align: center;
+    font-weight: 900;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size:2rem;
+    /* color: #777777; */
+    color:#fe1587;
+    font-family:'Quintessential', cursive;
+  }
+  
+  
+  .blue{
+    color:blue
+  }
+  
+  .btn{
+    border-radius: 5px;
+    padding:1rem 3rem 1rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    background-color:#fe1587;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+    margin-left: 52rem;
+  }
+  
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
